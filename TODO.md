@@ -1,0 +1,1 @@
+https://www.manpagez.com/html/gtk3/gtk3-3.20.3/GtkStackSidebar.php
