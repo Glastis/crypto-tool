@@ -12,7 +12,8 @@ add_executable(${BINARY_NAME}
         crypto/aes.c        crypto/aes.h
         graphic/master.c    graphic/master.h
         graphic/sidebar.c   graphic/sidebar.h
-)
+        graphic/textboxes.c graphic/textboxes.h
+        graphic/utilities.c graphic/utilities.h)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK REQUIRED gtk+-3.0)

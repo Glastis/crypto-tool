@@ -3,23 +3,19 @@
 //
 
 #include "sidebar.h"
+#include "textboxes.h"
 
 static void             create_sidebar_stack_add_label(GtkStack *stack, const char *name, const char *value)
 {
-    GtkWidget           *label;
-
-    label = gtk_label_new(value);
-    gtk_stack_add_titled(stack, label, name, value);
+    gtk_stack_add_titled(stack, GTK_WIDGET(create_textarea_counted(value)), name, value);
 }
 
 static GtkStack         *create_sidebar_stack(GtkWidget *grid)
 {
     GtkStack            *stack;
 
-    puts(__func__);
     stack = GTK_STACK(gtk_stack_new());
     gtk_stack_set_homogeneous(stack, gtk_true());
-    puts(__func__);
     gtk_grid_attach(GTK_GRID(grid), GTK_WIDGET(stack), 1, 0, 1, 1);
     create_sidebar_stack_add_label(stack, "1", "coucou");
     create_sidebar_stack_add_label(stack, "2", "coucoumdr");

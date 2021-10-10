@@ -7,6 +7,10 @@
 
 #include <gtk/gtk.h>
 
+#define WINDOW_TITLE    "Crypto Tool"
+#define WINDOW_SIZE_X   400
+#define WINDOW_SIZE_Y   400
+
 void                    main_window(GtkApplication* app, gpointer user_data);
 
 #endif //CRYPTO_TOOL_MASTER_H
